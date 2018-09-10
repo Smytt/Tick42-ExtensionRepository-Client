@@ -196,13 +196,13 @@ let app = (() => {
                     rating => {
                         rating = render.extensionRating(rating);
                         let displayRating = {
-                            rating,
+                            rating: rating.toFixed(2),
                             timesRated
                         }
                         if (currentRatedStatus == 0) {
                             timesRated = parseInt(timesRated) + 1;
                             displayRating = {
-                                rating,
+                                rating: rating.toFixed(2),
                                 timesRated
                             }
                             $('.info .rating').attr('id', rating);
